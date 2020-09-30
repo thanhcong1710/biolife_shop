@@ -1,0 +1,14 @@
+{
+    "name": "hieubv/timezones",
+    "description": "Demo-packsges to show my project",
+    "authors": [
+        {
+            "name": "Laravel Daily",
+            "email": "info@laraveldaily.com"
+        }
+    ],
+    "type": "dev",
+    "license": "n",
+    "minimum-stability": "dev",
+    "require": {}
+}
