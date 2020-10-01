@@ -1,32 +1,74 @@
 @extends('layout.index')
 
 @section('content')
+<!--Hero Section-->
+<div class="hero-section hero-background">
+	<h1 class="page-title">Organic Fruits</h1>
+</div>
 
-<div id="content">			
-	<form action="login" method="post" class="beta-form-checkout">
-	<input type="hidden" name="_token" value="{{csrf_token()}}">
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<h4>Đăng nhập</h4>
-				<div class="space20">&nbsp;</div>
-				
-				<div class="form-block">
-					<label for="email">Email *</label>
-					<input type="email" id="email" required name="email">
+<!--Navigation section-->
+<div class="container">
+	<nav class="biolife-nav">
+		<ul>
+			<li class="nav-item"><a href="http://kute-themes.com/html/biolife/index.html" class="permal-link">Home</a></li>
+			<li class="nav-item"><span class="current-page">Authentication</span></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="page-contain login-page">
+
+	<!-- Main content -->
+	<div id="main-content" class="main-content">
+		<div class="container">
+
+			<div class="row">
+
+				<!--Form Sign In-->
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="signin-container">
+						<form action="http://kute-themes.com/html/biolife/login.html#" name="frm-login" method="post">
+							<p class="form-row">
+								<label for="fid-name">Email Address:<span class="requite">*</span></label>
+								<input type="text" id="fid-name" name="name" value="" class="txt-input">
+							</p>
+							<p class="form-row">
+								<label for="fid-pass">Password:<span class="requite">*</span></label>
+								<input type="email" id="fid-pass" name="email" value="" class="txt-input">
+							</p>
+							<p class="form-row wrap-btn">
+								<button class="btn btn-submit btn-bold" type="submit">sign in</button>
+								<a href="http://kute-themes.com/html/biolife/login.html#" class="link-to-help">Forgot your password</a>
+							</p>
+						</form>
+					</div>
 				</div>
-				<div class="form-block">
-					<label for="phone">Mật khẩu*</label>
-					<input type="password" id="password" required name="password">
+
+				<!--Go to Register form-->
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="register-in-container">
+						<div class="intro">
+							<h4 class="box-title">New Customer?</h4>
+							<p class="sub-title">Create an account with us and you’ll be able to:</p>
+							<ul class="lis">
+								<li>Check out faster</li>
+								<li>Save multiple shipping anddesses</li>
+								<li>Access your order history</li>
+								<li>Track new orders</li>
+								<li>Save items to your Wishlist</li>
+							</ul>
+							<a href="http://kute-themes.com/html/biolife/login.html#" class="btn btn-bold">Create an account</a>
+						</div>
+					</div>
 				</div>
-				<div class="form-block">
-					<button type="submit" class="btn btn-primary">Đăng nhập</button>
-				</div>
+
 			</div>
-			<div class="col-sm-3"></div>
+
 		</div>
-	</form>
-</div> <!-- #content -->
+
+	</div>
+
+</div>
 
 @endsection
 

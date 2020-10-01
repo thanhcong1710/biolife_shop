@@ -1,0 +1,8 @@
+.header-area.layout-01{
+    background-image :none;
+    position: relative;
+}
+.home-page .header-area.layout-01{
+    background-image: url(../images/home-01/bg_header-01.png);
+    position: absolute;
+}

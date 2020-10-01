@@ -1,126 +1,157 @@
 @extends('layout.index')
 
 @section('content')
-<div id="content">
-	@if(count($errors) > 0)
-		@foreach($errors->all() as $er)
-			<div class="alert alert-danger">
-				{{$er}}<br>
-			</div>
-		@endforeach
-	@endif	
+<!--Hero Section-->
+<div class="hero-section hero-background">
+	<h1 class="page-title">Organic Fruits</h1>
+</div>
 
-	@if(session('thongbao'))
-		<div class="alert alert-success">{{session('thongbao')}}</div>
-	@endif	
-	<form action="{{route('checkout')}}" method="post" class="beta-form-checkout">
-	<input type="hidden" name="_token" value="{{csrf_token()}}">
-		<div class="row">
-			<div class="col-sm-6">
-				<h4>Đặt hàng</h4>
-				<div class="space20">&nbsp;</div>
+<!--Navigation section-->
+<div class="container">
+	<nav class="biolife-nav">
+		<ul>
+			<li class="nav-item"><a href="http://kute-themes.com/html/biolife/index.html" class="permal-link">Home</a></li>
+			<li class="nav-item"><span class="current-page">ShoppingCart</span></li>
+		</ul>
+	</nav>
+</div>
 
-				<div class="form-block">
-					<label for="name">Họ tên*</label>
-					<input type="text" id="name" placeholder="Họ tên" name="name" required>
-				</div>
-				<div class="form-block">
-					<label>Giới tính </label>
-					<input id="gender" type="radio" class="input-radio" name="gender" value="nam" checked="checked" style="width: 10%"><span style="margin-right: 10%">Nam</span>
-					<input id="gender" type="radio" class="input-radio" name="gender" value="nữ" style="width: 10%"><span>Nữ</span>
-								
-				</div>
+<div class="page-contain checkout">
 
-				<div class="form-block">
-					<label for="email">Email*</label>
-					<input type="email" id="email" name = "email" required placeholder="expample@gmail.com">
-				</div>
+	<!-- Main content -->
+	<div id="main-content" class="main-content">
+		<div class="container sm-margin-top-37px">
+			<div class="row">
 
-				<div class="form-block">
-					<label for="adress">Địa chỉ*</label>
-					<input type="text" id="adress" name = "address" placeholder="Nhập địa chỉ" required>
-				</div>
-				
-
-				<div class="form-block">
-					<label for="phone">Điện thoại*</label>
-					<input type="text" id="phone" name="phone" required>
-				</div>
-				
-				<div class="form-block">
-					<label for="notes">Ghi chú</label>
-					<textarea id="note" name = "note"></textarea>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="your-order">
-					<div class="your-order-head"><h5>Đơn hàng của bạn</h5></div>
-					<div class="your-order-body" style="padding: 0px 10px">
-						<div class="your-order-item">
-							<div>
-							<!--  one item	 -->
-							@if(count($item) >0)
-								@foreach($item as $product)
-									<div class="media">
-										<img width="25%" width="80" height="80" src="image/product/{{$product['item']->image}}" alt="" class="pull-left">
-										<div class="media-body">
-											<p class="font-large">{{$product['item']->name}}</p>
-											
-											<span class="color-gray your-order-info">Số lượng: {{$product['soluong']}}</span>
-											<span class="color-gray your-order-info">
-											đơn giá: 
-											@if($product['item']->promotion_price < $product['item']->unit_price && $product['item']->promotion_price  != 0)
-												{{number_format($product['item']->promotion_price)}}
-											@else
-												{{number_format($product['item']->unit_price)}}
-											@endif
-											</span>
+				<!--checkout progress box-->
+				<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+					<div class="checkout-progress-wrap">
+						<ul class="steps">
+							<li class="step 1st">
+								<div class="checkout-act active">
+									<h3 class="title-box"><span class="number">1</span>Customer</h3>
+									<div class="box-content">
+										<p class="txt-desc">Checking out as a <a class="pmlink" href="http://kute-themes.com/html/biolife/checkout.html#">Guest?</a> You’ll be able to save your details to create an account with us later.</p>
+										<div class="login-on-checkout">
+											<form action="http://kute-themes.com/html/biolife/checkout.html#" name="frm-login" method="post">
+												<p class="form-row">
+													<label for="input_email">Email Address</label>
+													<input type="email" name="email" id="input_email" value="" placeholder="Your email">
+													<button type="submit" name="btn-sbmt" class="btn">Continue As Guest</button>
+												</p>
+												<p class="form-row">
+													<input type="checkbox" name="subcribe" id="input_subcribe">
+													<label for="input_subcribe">Subscribe to our newsletter</label>
+												</p>
+												<p class="msg">Already have an account? <a href="http://kute-themes.com/html/biolife/checkout.html#" class="link-forward">Sign in now</a></p>
+											</form>
 										</div>
 									</div>
-								@endforeach
-							@endif
-							<!-- end one item -->
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="your-order-item">
-							<div class="pull-left"><p class="your-order-f18">Tổng tiền:</p></div>
-							<div class="pull-right"><h5 class="color-black">{{number_format($tongtien)}}</h5></div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-					<div class="your-order-head"><h5>Hình thức thanh toán</h5></div>
-					
-					<div class="your-order-body">
-						<ul class="payment_methods methods">
-							<li class="payment_method_bacs">
-								<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
-								<label for="payment_method_bacs">Thanh toán khi nhận hàng </label>
-								<div class="payment_box payment_method_bacs" style="display: block;">
-									Cửa hàng sẽ gửi hàng đến địa chỉ của bạn, bạn xem hàng rồi thanh toán tiền cho nhân viên giao hàng
-								</div>						
+								</div>
 							</li>
-
-							<li class="payment_method_cheque">
-								<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="ATM" data-order_button_text="">
-								<label for="payment_method_cheque">Chuyển khoản </label>
-								<div class="payment_box payment_method_cheque" style="display: none;">
-									Chuyển tiền đến tài khoản sau:
-									<br>- Số tài khoản: 109004769067
-									<br>- Chủ TK: Bùi Văn Hiếu
-									<br>- Ngân hàng VietinBank, Chi nhánh tây Hà Nội
-								</div>						
+							<li class="step 2nd">
+								<div class="checkout-act">
+									<h3 class="title-box"><span class="number">2</span>Shipping</h3>
+								</div>
 							</li>
-							
+							<li class="step 3rd">
+								<div class="checkout-act">
+									<h3 class="title-box"><span class="number">3</span>Billing</h3>
+								</div>
+							</li>
+							<li class="step 4th">
+								<div class="checkout-act">
+									<h3 class="title-box"><span class="number">4</span>Payment</h3>
+								</div>
+							</li>
 						</ul>
 					</div>
-					<button type="submit" class="text-center beta-btn primary">Đặt hàng<i class="fa fa-chevron-right"></i></button>
-					
-				</div> <!-- .your-order -->
+				</div>
+
+				<!--Order Summary-->
+				<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
+					<div class="order-summary sm-margin-bottom-80px">
+						<div class="title-block">
+							<h3 class="title">Order Summary</h3>
+							<a href="http://kute-themes.com/html/biolife/checkout.html#" class="link-forward">Edit cart</a>
+						</div>
+						<div class="cart-list-box short-type">
+							<span class="number">2 items</span>
+							<ul class="cart-list">
+								<li class="cart-elem">
+									<div class="cart-item">
+										<div class="product-thumb">
+											<a class="prd-thumb" href="http://kute-themes.com/html/biolife/checkout.html#">
+												<figure><img src="./Biolife - Organic Food_files/pr-01(1).jpg" width="113" height="113" alt="shop-cart"></figure>
+											</a>
+										</div>
+										<div class="info">
+											<span class="txt-quantity">1X</span>
+											<a href="http://kute-themes.com/html/biolife/checkout.html#" class="pr-name">National Fresh Fruit</a>
+										</div>
+										<div class="price price-contain">
+											<ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
+											<del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
+										</div>
+									</div>
+								</li>
+								<li class="cart-elem">
+									<div class="cart-item">
+										<div class="product-thumb">
+											<a class="prd-thumb" href="http://kute-themes.com/html/biolife/checkout.html#">
+												<figure><img src="./Biolife - Organic Food_files/pr-02(1).jpg" width="113" height="113" alt="shop-cart"></figure>
+											</a>
+										</div>
+										<div class="info">
+											<span class="txt-quantity">1X</span>
+											<a href="http://kute-themes.com/html/biolife/checkout.html#" class="pr-name">National Fresh Fruit</a>
+										</div>
+										<div class="price price-contain">
+											<ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
+											<del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="subtotal">
+								<li>
+									<div class="subtotal-line">
+										<b class="stt-name">Subtotal</b>
+										<span class="stt-price">£170.00</span>
+									</div>
+								</li>
+								<li>
+									<div class="subtotal-line">
+										<b class="stt-name">Shipping</b>
+										<span class="stt-price">£20.00</span>
+									</div>
+								</li>
+								<li>
+									<div class="subtotal-line">
+										<b class="stt-name">Tax</b>
+										<span class="stt-price">£0.00</span>
+									</div>
+								</li>
+								<li>
+									<div class="subtotal-line">
+										<a href="http://kute-themes.com/html/biolife/checkout.html#" class="link-forward">Promo/Gift Certificate</a>
+									</div>
+								</li>
+								<li>
+									<div class="subtotal-line">
+										<b class="stt-name">total:</b>
+										<span class="stt-price">£190.00</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
-	</form>
-</div> <!-- #content -->
+	</div>
+</div>
 
 @endsection
 

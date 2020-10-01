@@ -1,4 +1,3 @@
-	@yield('script')
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,73 +6,34 @@
 	
 	<title>@yield('title')</title>
 	<!-- Base URL for CSS -->
-    	<base href="{{asset('')}}">
-
-	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/dest/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/dest/vendors/colorbox/example3/colorbox.css">
-	<link rel="stylesheet" href="assets/dest/rs-plugin/css/settings.css">
-	<link rel="stylesheet" href="assets/dest/rs-plugin/css/responsive.css">
-	<link rel="stylesheet" title="style" href="assets/dest/css/style.css">
-	<link rel="stylesheet" href="assets/dest/css/animate.css">
-	<link rel="stylesheet" title="style" href="assets/dest/css/huong-style.css">
-	@yield('css')
+	<base href="{{asset('')}}">
+	<link href="assets/biolife/css/css" rel="stylesheet">
+    <link href="assets/biolife/css/css(1)" rel="stylesheet">
+    <link href="assets/biolife/css/css(2)" rel="stylesheet">
+    <link href="assets/biolife/css/css(3)" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="http://kute-themes.com/html/biolife/assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/biolife/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/biolife/css/animate.min.css">
+    <link rel="stylesheet" href="assets/biolife/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/biolife/css/nice-select.css">
+    <link rel="stylesheet" href="assets/biolife/css/slick.min.css">
+    <link rel="stylesheet" href="assets/biolife/css/style.css">
+    <link rel="stylesheet" href="assets/biolife/css/main-color01.css">
+    <link rel="stylesheet" type="text/css" href="assets/biolife/css/prm-style.min.css">
+    <link rel="stylesheet" href="assets/biolife/css/custom.css">
 </head>
-<body>
-	@yield('sdk_javascript')
-	<!--header-->
+<body class="biolife-body @yield('class_page')">
 	@include('layout.header')
-	<!--end-header-->
-	<!--slider-->
-
-	<div class="container">
-		@yield('content')
-	</div> <!-- .container -->
-	<!-- .container -->
-
+	@yield('content')
 	@include('layout.footer')
-	<div class="copyright">
-		<div class="container">
-			<p class="pull-left">HieuBV (&copy;) 2017</p>
-			<p class="pull-right pay-options">
-				<a href="#"><img src="assets/dest/images/pay/master.jpg" alt="" /></a>
-				<a href="#"><img src="assets/dest/images/pay/pay.jpg" alt="" /></a>
-				<a href="#"><img src="assets/dest/images/pay/visa.jpg" alt="" /></a>
-				<a href="#"><img src="assets/dest/images/pay/paypal.jpg" alt="" /></a>
-			</p>
-			<div class="clearfix"></div>
-		</div> <!-- .container -->
-	</div> <!-- .copyright -->
-
-
-	<!-- include js files -->
-	<script src="assets/dest/js/jquery.js"></script>
-	<script src="assets/dest/vendors/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-	<script src="assets/dest/vendors/bxslider/jquery.bxslider.min.js"></script>
-	<script src="assets/dest/vendors/colorbox/jquery.colorbox-min.js"></script>
-	<script src="assets/dest/vendors/animo/Animo.js"></script>
-	<script src="assets/dest/vendors/dug/dug.js"></script>
-	<script src="assets/dest/js/scripts.min.js"></script>
-	<script src="assets/dest/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-	<script src="assets/dest/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="assets/dest/js/waypoints.min.js"></script>
-	<script src="assets/dest/js/wow.min.js"></script>
-	<!--customjs-->
-	<script src="assets/dest/js/custom2.js"></script>
-	<script>
-	$(document).ready(function($) {    
-		$(window).scroll(function(){
-			if($(this).scrollTop()>150){
-			$(".header-bottom").addClass('fixNav')
-			}else{
-				$(".header-bottom").removeClass('fixNav')
-			}}
-		)
-	})
-	</script>
-	@yield('script')
+	<script src="assets/biolife/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/biolife/js/bootstrap.min.js"></script>
+    <script src="assets/biolife/js/jquery.countdown.min.js"></script>
+    <script src="assets/biolife/js/jquery.nice-select.min.js"></script>
+    <script src="assets/biolife/js/jquery.nicescroll.min.js"></script>
+    <script src="assets/biolife/js/slick.min.js"></script>
+    <script src="assets/biolife/js/biolife.framework.js"></script>
+    <script src="assets/biolife/js/functions.js"></script>
+    <div id="overlay"></div>
 </body>
 </html>
