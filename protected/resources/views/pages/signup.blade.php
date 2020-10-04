@@ -1,63 +1,101 @@
 @extends('layout.index')
 
 @section('content')
+<!--Hero Section-->
+<div class="hero-section hero-background">
+	<h1 class="page-title">Organic Fruits</h1>
+</div>
 
-<div id="content">
-	@if(count($errors) >0)
-		<div class="alert alert-danger">
-			@foreach($errors->all() as $er)
-				{{$er}}<br>
-			@endforeach
-		</div>
+<!--Navigation section-->
+<div class="container">
+	<nav class="biolife-nav">
+		<ul>
+			<li class="nav-item"><a href="trangchu" class="permal-link">Trang chủ</a></li>
+			<li class="nav-item"><span class="current-page">Đăng ký</span></li>
+		</ul>
+	</nav>
+</div>
 
-	@endif	
-	@if(session('thongbao'))
-		<div class="alert alert-success">{{session('thongbao')}}</div>
-	@endif
-	<form action="{{route('signup')}}" method="post" class="beta-form-checkout">
-	<input type="hidden" name="_token" value="{{csrf_token()}}">
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<h4>Đăng kí</h4>
-				<div class="space20">&nbsp;</div>
-				
-				<div class="form-block">
-					<label for="email">Email *</label>
-					<input type="email" id="email" name = "email" required placeholder="expample@gmail.com">
+<div class="page-contain login-page">
+
+	<!-- Main content -->
+	<div id="main-content" class="main-content">
+		<div class="container">
+
+			<div class="row">
+
+				<!--Form Sign In-->
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="signin-container">
+					@if(count($errors) >0)
+						<div class="alert alert-danger">
+							@foreach($errors->all() as $er)
+								{{$er}}<br>
+							@endforeach
+						</div>
+
+					@endif	
+					@if(session('thongbao'))
+						<div class="alert alert-success">{{session('thongbao')}}</div>
+					@endif
+						<form action="{{route('signup')}}" method="post" class="beta-form-checkout">
+							<input type="hidden" name="_token" value="{{csrf_token()}}">
+							<p class="form-row">
+								<label for="fid-name">Email<span class="requite">*</span></label>
+								<input type="email" id="fid-name" name="email" value="" class="txt-input" required>
+							</p>
+							<p class="form-row">
+								<label for="fid-name">Họ tên<span class="requite">*</span></label>
+								<input type="text" id="fid-name" name="name" value="" class="txt-input" required>
+							</p>
+							<p class="form-row">
+								<label for="fid-name">Địa chỉ<span class="requite">*</span></label>
+								<input type="text" id="fid-name" name="address" value="" class="txt-input" required>
+							</p>
+							<p class="form-row">
+								<label for="fid-name">Điện thoại<span class="requite">*</span></label>
+								<input type="text" id="fid-name" name="phone" value="" class="txt-input" required>
+							</p>
+							<p class="form-row">
+								<label for="fid-pass">Mật khẩu<span class="requite">*</span></label>
+								<input type="password" id="fid-pass" name="password" value="" class="txt-input" required>
+							</p>
+							<p class="form-row">
+								<label for="fid-pass">Nhập lại mật khẩu<span class="requite">*</span></label>
+								<input type="password" id="fid-pass" name="passwordAgain" value="" class="txt-input" required>
+							</p>
+							<p class="form-row wrap-btn">
+								<button class="btn btn-submit btn-bold" type="submit">Đăng ký</button>
+							</p>
+						</form>
+					</div>
 				</div>
 
-				<div class="form-block">
-					<label for="your_last_name">Họ tên *</label>
-					<input type="text" id="your_last_name" name="name" required placeholder="Nhập họ tên">
+				<!--Go to Register form-->
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="register-in-container">
+						<div class="intro">
+							<h4 class="box-title">New Customer?</h4>
+							<p class="sub-title">Create an account with us and you’ll be able to:</p>
+							<ul class="lis">
+								<li>Check out faster</li>
+								<li>Save multiple shipping anddesses</li>
+								<li>Access your order history</li>
+								<li>Track new orders</li>
+								<li>Save items to your Wishlist</li>
+							</ul>
+							<a href="http://kute-themes.com/html/biolife/login.html#" class="btn btn-bold">Create an account</a>
+						</div>
+					</div>
 				</div>
 
-				<div class="form-block">
-					<label for="adress">Địa chỉ *</label>
-					<input type="text" id="adress"  name="address" required placeholder="Nhập địa chỉ">
-				</div>
-
-
-				<div class="form-block">
-					<label for="phone">Điện thoại *</label>
-					<input type="text" id="phone" required name="phone" placeholder="Nhập số điện thoại">
-				</div>
-				<div class="form-block">
-					<label for="phone">Mật khẩu *</label>
-					<input type="password" id="phone" required name="password">
-				</div>
-				<div class="form-block">
-					<label for="phone">Nhập lại mật khẩu *</label>
-					<input type="password" id="phone" required name="passwordAgain">
-				</div>
-				<div class="form-block">
-					<button type="submit" class="btn btn-primary">Đăng ký</button>
-				</div>
 			</div>
-			<div class="col-sm-3"></div>
+
 		</div>
-	</form>
-</div> <!-- #content -->
+
+	</div>
+
+</div>
 
 @endsection
 

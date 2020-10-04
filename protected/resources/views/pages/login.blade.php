@@ -10,8 +10,8 @@
 <div class="container">
 	<nav class="biolife-nav">
 		<ul>
-			<li class="nav-item"><a href="http://kute-themes.com/html/biolife/index.html" class="permal-link">Home</a></li>
-			<li class="nav-item"><span class="current-page">Authentication</span></li>
+			<li class="nav-item"><a href="trangchu" class="permal-link">Trang chủ</a></li>
+			<li class="nav-item"><span class="current-page">Đăng nhập</span></li>
 		</ul>
 	</nav>
 </div>
@@ -27,18 +27,19 @@
 				<!--Form Sign In-->
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="signin-container">
-						<form action="http://kute-themes.com/html/biolife/login.html#" name="frm-login" method="post">
+						<form action="login" method="post" class="beta-form-checkout">
+							<input type="hidden" name="_token" value="{{csrf_token()}}">
 							<p class="form-row">
-								<label for="fid-name">Email Address:<span class="requite">*</span></label>
-								<input type="text" id="fid-name" name="name" value="" class="txt-input">
+								<label for="fid-name">Email<span class="requite">*</span></label>
+								<input type="email" id="fid-name" name="email" value="" class="txt-input" required>
 							</p>
 							<p class="form-row">
-								<label for="fid-pass">Password:<span class="requite">*</span></label>
-								<input type="email" id="fid-pass" name="email" value="" class="txt-input">
+								<label for="fid-pass">Mật khẩu<span class="requite">*</span></label>
+								<input type="password" id="fid-pass" name="password" value="" class="txt-input" required>
 							</p>
 							<p class="form-row wrap-btn">
-								<button class="btn btn-submit btn-bold" type="submit">sign in</button>
-								<a href="http://kute-themes.com/html/biolife/login.html#" class="link-to-help">Forgot your password</a>
+								<button class="btn btn-submit btn-bold" type="submit">Đăng nhập</button>
+								<a href="#" class="link-to-help">Quên mật khẩu</a>
 							</p>
 						</form>
 					</div>

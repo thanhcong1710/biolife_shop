@@ -9,9 +9,8 @@
     <div class="container">
         <nav class="biolife-nav">
             <ul>
-                <li class="nav-item"><a href="http://kute-themes.com/html/biolife/index.html" class="permal-link">Home</a></li>
-                <li class="nav-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="permal-link">Natural Organic</a></li>
-                <li class="nav-item"><span class="current-page">Fresh Fruit</span></li>
+                <li class="nav-item"><a href="trangchu" class="permal-link">Trang chủ</a></li>
+                <li class="nav-item"><span class="current-page">{{$loai_products->name}}</span></li>
             </ul>
         </nav>
     </div>
@@ -21,177 +20,6 @@
             <div class="row">
                 <!-- Main content -->
                 <div id="main-content" class="main-content col-lg-9 col-md-8 col-sm-12 col-xs-12">
-
-                    <div class="block-item recently-products-cat md-margin-bottom-39">
-                        <ul class="products-list biolife-carousel nav-center-02 nav-none-on-mobile slick-initialized slick-slider" data-slick="{&quot;rows&quot;:1,&quot;arrows&quot;:true,&quot;dots&quot;:false,&quot;infinite&quot;:false,&quot;speed&quot;:400,&quot;slidesMargin&quot;:0,&quot;slidesToShow&quot;:5, &quot;responsive&quot;:[{&quot;breakpoint&quot;:1200, &quot;settings&quot;:{ &quot;slidesToShow&quot;: 3}},{&quot;breakpoint&quot;:992, &quot;settings&quot;:{ &quot;slidesToShow&quot;: 3, &quot;slidesMargin&quot;:30}},{&quot;breakpoint&quot;:768, &quot;settings&quot;:{ &quot;slidesToShow&quot;: 2, &quot;slidesMargin&quot;:10}}]}"><span class="biolife-icon icon-left-arrow prev slick-arrow slick-disabled" aria-disabled="true" style=""></span>
-                            <div class="slick-list draggable">
-                                <div class="slick-track" style="opacity: 1; width: 1602px; transform: translate3d(0px, 0px, 0px);">
-                                    <li class="product-item slick-slide slick-current slick-active first-slick" data-slick-index="0" aria-hidden="false" tabindex="0" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="0">
-                                                    <img src="assets/biolife/images/p-08.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="0">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="0">
-                                                    <img src="assets/biolife/images/p-11.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="0">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="0">
-                                                    <img src="assets/biolife/images/p-17.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="0">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="0" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="0">
-                                                    <img src="assets/biolife/images/p-15.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="0">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide slick-active last-slick" data-slick-index="4" aria-hidden="false" tabindex="0" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="0">
-                                                    <img src="assets/biolife/images/p-09.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="0">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="-1">
-                                                    <img src="assets/biolife/images/p-02.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="-1">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="-1">
-                                                    <img src="assets/biolife/images/p-07.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="-1">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="-1">
-                                                    <img src="assets/biolife/images/p-03.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="-1">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product-item slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" style="margin-right: 0px; width: 178px;">
-                                        <div class="contain-product layout-02">
-                                            <div class="product-thumb">
-                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product" tabindex="-1">
-                                                    <img src="assets/biolife/images/p-21.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                                </a>
-                                            </div>
-                                            <div class="info">
-                                                <b class="categories">Fresh Fruit</b>
-                                                <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name" tabindex="-1">National Fresh Fruit</a></h4>
-                                                <div class="price">
-                                                    <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                    <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-                            <span class="biolife-icon icon-arrow-right next slick-arrow" style="" aria-disabled="false"></span>
-                        </ul>
-                    </div>
 
                     <div class="product-category grid-style">
 
@@ -297,469 +125,55 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="selector-item viewmode-selector">
-                                        <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html" class="viewmode grid-mode active"><i class="biolife-icon icon-grid"></i></a>
-                                        <a href="http://kute-themes.com/html/biolife/category-list-left-sidebar.html" class="viewmode detail-mode"><i class="biolife-icon icon-list"></i></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <ul class="products-list">
-
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-11.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
+                            @foreach($products_top as $k=> $prt)
+                            <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                                <div class="contain-product layout-default">
+                                    <div class="product-thumb">
+                                        <a href="product/{{$prt->id}}/<?php echo Common::changeTitle($prt->name).".html"?>" class="link-to-product">
+                                            <img src="image/product/{{$prt->image}}" alt="dd" style="height:200px" class="product-thumnail">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="product-title"><a href="product/{{$prt->id}}/<?php echo Common::changeTitle($prt->name).".html"?>" class="pr-name">{{$prt->name}}</a></h4>
+                                        <div class="price">
+                                            @if($prt->promotion_price < $prt->unit_price && $prt->promotion_price  != 0)
+                                            <ins><span class="price-amount">{{number_format($prt->promotion_price)}}<span class="currencySymbol">VNĐ</span></span></ins>
+                                            <del><span class="price-amount">{{number_format($prt->unit_price)}}<span class="currencySymbol">VNĐ</span></span></del>
+                                            @else
+                                            <ins><span class="price-amount">{{number_format($prt->unit_price)}}</span><span class="currencySymbol">VNĐ</span></ins>
+                                            @endif
+                                            
                                         </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
+                                        <div class="shipping-info">
+                                            <p class="shipping-day">3-Day Shipping</p>
+                                            <p class="for-today">Pree Pickup Today</p>
+                                        </div>
+                                        <div class="slide-down-box">
+                                            <p class="message">All products are carefully selected to ensure food safety.</p>
+                                            <div class="buttons">
+                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                                <a href="add_product/{{$prt->id}}" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>Thêm vào giỏ hàng</a>
+                                                <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-13.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-21.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-14.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-15.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-16.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-17.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-18.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-10.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-11.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-09.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-08.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-10.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-17.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="product-item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                                    <div class="contain-product layout-default">
-                                        <div class="product-thumb">
-                                            <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-to-product">
-                                                <img src="assets/biolife/images/p-14.jpg" alt="dd" width="270" height="270" class="product-thumnail">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <b class="categories">Fresh Fruit</b>
-                                            <h4 class="product-title"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="pr-name">National Fresh Fruit</a></h4>
-                                            <div class="price">
-                                                <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                                <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                            </div>
-                                            <div class="shipping-info">
-                                                <p class="shipping-day">3-Day Shipping</p>
-                                                <p class="for-today">Pree Pickup Today</p>
-                                            </div>
-                                            <div class="slide-down-box">
-                                                <p class="message">All products are carefully selected to ensure food safety.</p>
-                                                <div class="buttons">
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
-                                                    <a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
+                                </div>
+                            </li>
+                            <?php if($k%3==2):?>
+                                <div style="clear: both;"></div>
+                            <?php endif?>    
+						    @endforeach
                             </ul>
                         </div>
 
                         <div class="biolife-panigations-block">
-                            <ul class="panigation-contain">
-                                <li><span class="current-page">1</span></li>
-                                <li><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-page">2</a></li>
-                                <li><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-page">3</a></li>
-                                <li><span class="sep">....</span></li>
-                                <li><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-page">20</a></li>
-                                <li><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="link-page next"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                            </ul>
+                            {{$products_top->links()}}
                         </div>
 
                     </div>
@@ -773,28 +187,15 @@
                     </div>
                     <div class="sidebar-contain">
                         <div class="widget biolife-filter">
-                            <h4 class="wgt-title">Departements</h4>
+                            <h4 class="wgt-title">Danh mục sản phẩm</h4>
                             <div class="wgt-content">
                                 <ul class="cat-list">
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">Organic Food</a></li>
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">Fresh Fruit</a></li>
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">Dried Fruits</a></li>
+                                @foreach($type_products as $tp)
+                                    <li class="cat-list-item"><a href="product_type/{{$tp->id}}/<?php echo Common::changeTitle($tp->name).".html"?>"  class="cat-link">{{$tp->name}}</a></li>
+                                @endforeach
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="widget biolife-filter">
-                            <h4 class="wgt-title">Shipping &amp; Pickup</h4>
-                            <div class="wgt-content">
-                                <ul class="cat-list">
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">Show all</a></li>
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">2- Day shipping</a></li>
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">Shop to Home</a></li>
-                                    <li class="cat-list-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html#" class="cat-link">Free Pickup</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
                         <div class="widget price-filter biolife-filter">
                             <h4 class="wgt-title">Price</h4>
                             <div class="wgt-content">

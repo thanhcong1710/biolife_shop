@@ -14,23 +14,13 @@
 			</div>
 			<div class="top-bar right">
 				<ul class="horizontal-menu">
-					<li class="horz-menu-item currency">
-						<select name="currency" style="display: none;">
-							<option value="eur">€ EUR (Euro)</option>
-							<option value="usd" selected="">$ USD (Dollar)</option>
-							<option value="usd">£ GBP (Pound)</option>
-							<option value="usd">¥ JPY (Yen)</option>
-						</select>
-						<div class="nice-select" tabindex="0"><span class="current">$ USD (Dollar)</span>
-							<ul class="list">
-								<li data-value="eur" class="option">€ EUR (Euro)</li>
-								<li data-value="usd" class="option selected">$ USD (Dollar)</li>
-								<li data-value="usd" class="option">£ GBP (Pound)</li>
-								<li data-value="usd" class="option">¥ JPY (Yen)</li>
-							</ul>
-						</div>
-					</li>
-					<li><a href="http://kute-themes.com/html/biolife/login.html" class="login-link"><i class="biolife-icon icon-login"></i>My Account</a></li>
+					@if(isset($nguoidung))
+						<li><a href="{{route('nguoidung')}}" class="login-link"><i class="fa fa-user"></i>Tài khoản</a></li>
+						<li><a href="{{route('logout')}}" class="login-link"> <i class="fa fa-user"></i>Đăng xuất</a></li>
+					@else
+						<li><a href="{{route('signup')}}" class="login-link">Đăng ký</a></li>
+						<li><a href="{{route('login')}}" class="login-link">Đăng nhập</a></li>
+					@endif
 				</ul>
 			</div>
 		</div>
@@ -336,236 +326,25 @@
 				<div class="col-lg-6 col-md-6 hidden-sm hidden-xs md-possition-initial">
 					<div class="primary-menu">
 						<ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu" data-menuname="main menu">
-							<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Home</a></li>
-							<li class="menu-item menu-item-has-children has-megamenu">
-								<a href="http://kute-themes.com/html/biolife/home-01.html#" class="menu-name" data-title="Shop">Shop</a>
-								<div class="wrap-megamenu lg-width-900 md-full-width">
-									<div class="mega-content">
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Fresh Berries</h4>
-												<ul class="menu">
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Fruit &amp; Nut Gifts</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Mixed Fruits</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Oranges</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Bananas &amp; Plantains</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Fresh Gala Apples</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Vegetables</h4>
-												<ul class="menu">
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Berries</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Pears</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Chili Peppers</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Fresh Avocado</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Grapes</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu ">
-												<h4 class="menu-title">Fresh Fruits</h4>
-												<ul class="menu">
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Basket of apples</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Strawberry</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Blueberry</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Orange</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Pineapple</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Featured Products</h4>
-												<ul class="menu">
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Coffee Creamers</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Mayonnaise</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Almond Milk</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Fruit Jam</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Beverages</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
+							<li class="menu-item"><a href="trangchu">Trang chủ</a></li>
 							<li class="menu-item menu-item-has-children has-child">
-								<a href="http://kute-themes.com/html/biolife/home-01.html#" class="menu-name" data-title="Product">Product</a>
+								<a href="#" class="menu-name" data-title="Product">Sản phẩm</a>
 								<ul class="sub-menu">
-									<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Omelettes</a></li>
-									<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Breakfast Scrambles</a></li>
-									<li class="menu-item menu-item-has-children has-child"><a href="http://kute-themes.com/html/biolife/home-01.html#" class="menu-name" data-title="Eggs &amp; other considerations">Eggs &amp; other considerations</a>
-										<ul class="sub-menu">
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Classic Breakfast</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Huevos Rancheros</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Everything Egg Sandwich</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Egg Sandwich</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Vegan Burrito</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Biscuits and Gravy</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Bacon Avo Egg Sandwich</a></li>
-										</ul>
-									</li>
-									<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Griddle</a></li>
-									<li class="menu-item menu-item-has-children has-child"><a href="http://kute-themes.com/html/biolife/home-01.html#" class="menu-name" data-title="Sides &amp; Extras">Sides &amp; Extras</a>
-										<ul class="sub-menu">
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Breakfast Burrito</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Crab Cake Benedict</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Corned Beef Hash</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Steak &amp; Eggs</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Oatmeal</a></li>
-											<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Fruit &amp; Yogurt Parfait</a></li>
-										</ul>
-									</li>
-									<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Biscuits</a></li>
-									<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html#">Seasonal Fruit Plate</a></li>
+									@foreach($type_products as $tp)
+										<li class="menu-item"><a href="product_type/{{$tp->id}}/<?php echo Common::changeTitle($tp->name).".html"?>">{{$tp->name}}</a></li>
+									@endforeach
 								</ul>
 							</li>
-							<li class="menu-item menu-item-has-children has-megamenu">
-								<a href="http://kute-themes.com/html/biolife/home-01.html#" class="menu-name" data-title="Pages">Demo</a>
-								<div class="wrap-megamenu lg-width-800 md-full-width">
-									<div class="mega-content">
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Home Page</h4>
-												<ul class="menu">
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-01.html">Home 01</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-02.html">Home 02</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/index.html">Home 03</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-04.html">Home 04</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-05.html">Home 05</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-06.html">Home 06</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-07.html">Home 07</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-08.html">Home 08</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-09.html">Home 09</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-10.html">Home 10</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-11.html">Home 11</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/home-12.html">Home 12</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Inner Pages</h4>
-												<ul class="menu">
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/blog-post.html">Blog Single</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/blog-v01.html">Blog Style 01</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/blog-v02.html">Blog Style 02</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/blog-v03.html">Blog Style 03</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/contact.html">Contact Us</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/about-us.html">About Us</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/checkout.html">Checkout</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/shopping-cart.html">Shopping Cart</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/login.html">Login/Register</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/404.html">404</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Category Pages</h4>
-												<ul class="menu">
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-grid-3-cols.html">Grid 3 Cols</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-grid.html">Grid 4 Cols</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-grid-6-cols.html">Grid 6 Cols</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-grid-left-sidebar.html">Grid Left Sidebar</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-grid-right-sidebar.html">Grid Right Sidebar</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-list.html">List Full</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-list-left-sidebar.html">List Left Sidebar</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/category-list-right-sidebar.html">List Right Sidebar</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Product Types</h4>
-												<ul class="menu">
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/single-product-simple.html">Simple</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/single-product-grouped.html">Grouped</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/single-product.html">Variable</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/single-product-external.html">External/Affiliate</a></li>
-													<li class="menu-item"><a href="http://kute-themes.com/html/biolife/single-product-onsale.html">Countdown</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
+							<li class="menu-item menu-item-has-children has-child">
+								<a href="#" class="menu-name" data-title="Blog">Blog</a>
+								<ul class="sub-menu">
+									@foreach($type_blogs as $tp)
+										<li class="menu-item"><a href="blog_type/{{$tp->id}}/<?php echo Common::changeTitle($tp->Ten).".html"?>">{{$tp->Ten}}</a></li>
+									@endforeach
+								</ul>
 							</li>
-							<li class="menu-item menu-item-has-children has-megamenu">
-								<a href="http://kute-themes.com/html/biolife/home-01.html#" class="menu-name" data-title="Blog">Blog</a>
-								<div class="wrap-megamenu lg-width-800 md-full-width">
-									<div class="mega-content">
-										<div class="col-lg-3 col-md-3 col-xs-6">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Blog Categories</h4>
-												<ul class="menu">
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Beauty (30)</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Fashion (50)</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Food (10)</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Life Style (60)</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Travel (10)</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Nutrition (35)</a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Food Decoration (45)</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-3 col-md-3 col-xs-6">
-											<div class="wrap-custom-menu vertical-menu">
-												<h4 class="menu-title">Featured Posts</h4>
-												<ul class="menu">
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#1</sup></a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#2</sup></a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#3</sup></a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#4</sup></a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#5</sup></a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#6</sup></a></li>
-													<li><a href="http://kute-themes.com/html/biolife/home-01.html#">Post example<sup>#7</sup></a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-6 col-xs-12 md-margin-top-0 xs-margin-top-25px">
-											<div class="block-posts">
-												<h4 class="menu-title">Recent Posts</h4>
-												<ul class="posts">
-													<li>
-														<div class="block-post-item">
-															<div class="thumb"><a href="http://kute-themes.com/html/biolife/home-01.html#"><img src="assets/biolife/images/thumb-05.jpg" width="100" height="73" alt=""></a></div>
-															<div class="left-info">
-																<h4 class="post-name"><a href="http://kute-themes.com/html/biolife/home-01.html#">Ashwagandha: The #1 Herb in the World for Anxiety?</a></h4>
-																<span class="p-date">Jan 05, 2019</span>
-																<span class="p-comment">2 Comments</span>
-															</div>
-														</div>
-													</li>
-													<li>
-														<div class="block-post-item">
-															<div class="thumb"><a href="http://kute-themes.com/html/biolife/home-01.html#"><img src="assets/biolife/images/thumb-06.jpg" width="100" height="73" alt=""></a></div>
-															<div class="left-info">
-																<h4 class="post-name"><a href="http://kute-themes.com/html/biolife/home-01.html#">Ashwagandha: The #1 Herb in the World for Anxiety?</a></h4>
-																<span class="p-date">May 15, 2019</span>
-																<span class="p-comment">8 Comments</span>
-															</div>
-														</div>
-													</li>
-													<li>
-														<div class="block-post-item">
-															<div class="thumb"><a href="http://kute-themes.com/html/biolife/home-01.html#"><img src="assets/biolife/images/thumb-07.jpg" width="100" height="73" alt=""></a></div>
-															<div class="left-info">
-																<h4 class="post-name"><a href="http://kute-themes.com/html/biolife/home-01.html#">Ashwagandha: The #1 Herb in the World for Anxiety?</a></h4>
-																<span class="p-date">Apr 26, 2019</span>
-																<span class="p-comment">10 Comments</span>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="menu-item"><a href="http://kute-themes.com/html/biolife/contact.html">Contact</a></li>
+							<li class="menu-item"><a href="about">Giới thiệu</a></li>
+							<li class="menu-item"><a href="contacts">Liên hệ</a></li>
 						</ul>
 					</div>
 				</div>

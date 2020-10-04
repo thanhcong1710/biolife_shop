@@ -22,6 +22,7 @@ use App\Banner;
 use Session;
 
 use Cache;
+use App\Providers\UtilityServiceProvider as u;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -117,8 +118,9 @@ class AppServiceProvider extends ServiceProvider
         view()->composer(['layout.header','pages.product_type','pages.search'], function($view){
             
            $type_products = Type_Products::all();
+           $type_blogs = u::query("SELECT * FROM loaitin WHERE deleted_at IS NULL");
             
-            $view->with('type_products',$type_products);
+            $view->with(['type_products'=>$type_products,'type_blogs'=>$type_blogs]);
         });
 
         view()->composer(['layout.header','pages.shopping_cart'],function($view){
