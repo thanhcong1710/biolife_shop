@@ -391,5 +391,5 @@
 
 @endsection
 @section('title')
-{{$sanpham->type_products->name}}|{{$sanpham->name}}
+{{$sanpham->name}}
 @endsection

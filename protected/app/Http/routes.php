@@ -46,6 +46,8 @@ Route::get('logout','PagesController@getLogOut')->name('logout');
 Route::get('pricing','PagesController@getPricing');
 // page detail
 Route::get('product/{id}/{tenkhongdau}','PagesController@getProduct');
+Route::get('blog_type/{id}/{tenkhongdau}','PagesController@getBlog_Type')->name('product_type');
+Route::get('blog/{id}/{tenkhongdau}','PagesController@getBlog');
 //
 Route::get('shopping_cart','PagesController@getShopping_cart');
 //đăng ký

@@ -31,6 +31,8 @@ use App\Contacts;
 use App\About;
 
 use App\FacebookPluginsSocial;
+use App\News;
+use App\Providers\UtilityServiceProvider as u;
 
 class PagesController extends Controller
 {
@@ -525,5 +527,21 @@ class PagesController extends Controller
     public function getHtmlBlogDetail()
     {
         return view('pages.html_blog_detail');
+    }
+    public function getBlog_Type($id)
+    {
+        $news = News::where('deleted_at', NULL)->where('idLoaiTin', $id)->paginate(10);
+        $category_info = u::first("SELECT * FROM loaitin WHERE id=$id");
+        $categories = u::query("SELECT l.*,(SELECT count(id) FROM news WHERE idLoaiTin = l.id AND deleted_at IS NULL) AS count_new FROM loaitin AS l WHERE l.deleted_at IS NULL");
+        $new_noibat = u::query("SELECT * FROM news WHERE deleted_at IS NULL AND NoiBat=1");
+        return view('pages.blog_type', ['news'=>$news,'category_info'=>$category_info,'new_noibat'=>$new_noibat,'categories'=>$categories]);
+    }
+    public function getBlog($id)
+    {
+        $new = News::find($id);
+        $category_info = u::first("SELECT * FROM loaitin WHERE id=$new->idLoaiTin");
+        $categories = u::query("SELECT l.*,(SELECT count(id) FROM news WHERE idLoaiTin = l.id AND deleted_at IS NULL) AS count_new FROM loaitin AS l WHERE l.deleted_at IS NULL");
+        $new_noibat = u::query("SELECT * FROM news WHERE deleted_at IS NULL AND NoiBat=1");
+        return view('pages.blog', ['new'=>$new,'category_info'=>$category_info,'new_noibat'=>$new_noibat,'categories'=>$categories]);
     }
 }
